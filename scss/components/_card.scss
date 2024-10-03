@@ -55,9 +55,9 @@
   }
 
   &__heading {
-    @include text-preset($text-preset-1, $font-weight-700, 0, 100%);
+    @include text-preset($text-preset-1, 500, 0, 100%);
     @include respond-mobile {
-      @include text-preset($text-preset-1-mob, $font-weight-700, 0, 100%);
+      @include text-preset($text-preset-1-mob, 500, 0, 100%);
     }
     color: $color-stone-900;
   }
@@ -107,6 +107,7 @@
 
     &--list {
       @include display_flex_column($spacing-100);
+      color: $color-stone-600;
       padding-left: $spacing-300;
 
       &-item {
