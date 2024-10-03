@@ -1,0 +1,36 @@
+@mixin text-preset($font-size, $font-weight: 500, $letter-spacing: 0, $line-height: 150%) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin display_flex_column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin respond-mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin respond-tablet {
+  @media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin respond-ipad {
+  @media (min-width: $breakpoint-tablet + 1) and (max-width: $breakpoint-ipad) {
+    @content;
+  }
+}
+
+@mixin respond-ipad-pro {
+  @media only screen and (min-device-width: $breakpoint-ipad) and (max-device-width: $breakpoint-ipad-pro) and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}

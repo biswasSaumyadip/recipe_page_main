@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+$font-outfit: 'Outfit', sans-serif;
+$font-young-sarif: 'Young Serif', sans-serif;
+
+body {
+  font-family: $font-outfit;
+}
+
+h1,
+h3 {
+  font-family: $font-young-sarif;
+}
+
+h3 {
+  color: $color-brown-800;
+}
+
+h4.recipe-card__preparation--title {
+  @include text-preset($text-preset-3, $font-weight-600);
+  color: $color-rose-800;
+}
+
+.text-preset-2 {
+  @include text-preset($text-preset-2);
+}
+
+.text-preset-4 {
+  @include text-preset($text-preset-4, $font-weight-400);
+}
+
+.text-preset-4.bold {
+  @include text-preset($text-preset-4, $font-weight-700);
+}

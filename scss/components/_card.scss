@@ -1,0 +1,178 @@
+.recipe-card {
+  background-color: $color-white;
+  max-width: 73.6rem;
+  border-radius: $spacing-300;
+  padding: $spacing-500;
+
+  @include respond-mobile {
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  @include respond-ipad {
+    max-width: 61.6rem;
+  }
+
+  @include respond-tablet {
+    max-width: 61.6rem;
+  }
+
+  &__layout {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: $spacing-1600 $spacing-600;
+
+    @include respond-mobile {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    margin-bottom: $spacing-500;
+    &--img {
+      width: 100%;
+      height: 30rem;
+      border-radius: $spacing-150;
+
+      @include respond-mobile {
+        height: 17.1rem;
+        border-radius: 0;
+      }
+    }
+  }
+
+  &__content {
+    @include respond-mobile {
+      margin: 0 $spacing-400;
+      margin-bottom: $spacing-500;
+    }
+  }
+
+  &__overview {
+    @include display_flex_column($spacing-300);
+  }
+
+  &__heading {
+    @include text-preset($text-preset-1, $font-weight-700, 0, 100%);
+    @include respond-mobile {
+      @include text-preset($text-preset-1-mob, $font-weight-700, 0, 100%);
+    }
+    color: $color-stone-900;
+  }
+
+  &__paragraph {
+    @include text-preset($text-preset-4, 300, 0);
+    color: $color-stone-600;
+  }
+
+  section[class^='recipe-card__'] {
+    &:not(:last-child) {
+      margin-bottom: $spacing-400;
+    }
+
+    &:last-child {
+      margin-top: $spacing-400;
+    }
+  }
+
+  &__ruler {
+    border: none;
+    height: 1px;
+    background-color: $color-stone-150;
+    margin: $spacing-400 0;
+  }
+
+  &__preparation {
+    @include display_flex_column($spacing-200);
+    background-color: $color-rose-50;
+    border-radius: $spacing-150;
+    padding: $spacing-300;
+    list-style-position: inside;
+
+    &--list {
+      @include display_flex_column($spacing-100);
+      color: $color-stone-600;
+      padding-left: $spacing-100;
+
+      &-item::marker {
+        color: $color-rose-800;
+      }
+    }
+  }
+
+  &__ingredients {
+    @include display_flex_column($spacing-300);
+
+    &--list {
+      @include display_flex_column($spacing-100);
+      padding-left: $spacing-300;
+
+      &-item {
+        padding-left: $spacing-200;
+        &::marker {
+          color: $color-brown-800;
+        }
+      }
+    }
+  }
+
+  &__instructions {
+    @include display_flex_column($spacing-300);
+
+    &--list {
+      color: $color-stone-600;
+      @include display_flex_column($spacing-100);
+      padding-left: $spacing-300;
+      &-item {
+        padding-left: $spacing-200;
+        &::marker {
+          @include text-preset($text-preset-4, $font-weight-400);
+          color: $color-brown-800;
+          font-family: $font-outfit;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &__nutrition {
+    @include display_flex_column($spacing-300);
+
+    &--table {
+      border-collapse: collapse;
+
+      &-row {
+        border-bottom: 1px solid $color-stone-150;
+        padding-top: $spacing-150;
+        padding-bottom: $spacing-150;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      &-data {
+        padding: $spacing-150 0;
+
+        &:first-child {
+          padding-left: $spacing-400;
+        }
+
+        &:last-child {
+          padding-right: $spacing-400;
+        }
+      }
+    }
+  }
+}
+
+td.text-preset-4.bold {
+  color: $color-brown-800;
+}
+
+td.text-preset-4,
+span.text-preset-4 {
+  color: $color-stone-600;
+}
