@@ -9,15 +9,15 @@ body {
 }
 
 h1,
-h3 {
+h2 {
   font-family: $font-young-sarif;
 }
 
-h3 {
+h2 {
   color: $color-brown-800;
 }
 
-h4.recipe-card__preparation--title {
+h3.recipe-card__preparation--title {
   @include text-preset($text-preset-3, $font-weight-600);
   color: $color-rose-800;
 }
